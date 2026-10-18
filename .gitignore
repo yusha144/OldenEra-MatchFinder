@@ -1,0 +1,14 @@
+**/bin/
+**/obj/
+artifacts/
+/package/
+/releases/
+/work/
+*.dll
+*.pdb
+*.zip
+*.log
+.vs/
+.env
+.env.*
+*.user
