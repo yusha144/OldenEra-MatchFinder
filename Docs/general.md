@@ -4,17 +4,17 @@
 
 Версия 0.1.3 уведомляет звуком о найденном матче, если игра была свёрнута или находилась в фоне в момент события. Окно не активируется. Режимы Classic, Solo и Arena используют общий обработчик поиска в проверенной сборке игры.
 
-Поддерживается Windows x64, Steam-сборка 25672315, Unity 6000.0.66f1, BepInEx Unity.IL2CPP 6.0.0-be.788. Плагин предназначен для .NET 6. Перед подключением к игровым методам проверяются SHA256 `GameAssembly.dll` и `HeroesOldenEra_Data/il2cpp_data/Metadata/global-metadata.dat`. Ожидаемые суммы заданы в [BuildCompatibility.cs](../source/BuildCompatibility.cs) и [параметрах сборки](../release-settings.json).
+Поддерживается Windows x64, Steam-сборка 25672315, Unity 6000.0.66f1, BepInEx Unity.IL2CPP 6.0.0-be.788. Плагин предназначен для .NET 6. Перед подключением к игровым методам проверяются SHA256 `GameAssembly.dll` и `HeroesOldenEra_Data/il2cpp_data/Metadata/global-metadata.dat`. Ожидаемые суммы заданы в [BuildCompatibility.cs](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/source/BuildCompatibility.cs) и [параметрах сборки](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/development/release-settings.json).
 
 При несовпадении файлов уведомления отключаются. После обновления игры нужно снова проверить совместимость, а не просто заменить ожидаемые суммы.
 
 ## 2. Устройство и обработка события
 
-[Plugin.cs](../source/Plugin.cs) загружает настройку и регистрирует перехваты Harmony. [MatchmakingPatches.cs](../source/MatchmakingPatches.cs) обрабатывает `MatchmakingClient.OnMatchmakingGameFound`.
+[Plugin.cs](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/source/Plugin.cs) загружает настройку и регистрирует перехваты Harmony. [MatchmakingPatches.cs](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/source/MatchmakingPatches.cs) обрабатывает `MatchmakingClient.OnMatchmakingGameFound`.
 
 До штатной обработки события сохраняются идентификатор матча, режим, оставшееся время принятия, настройка звука и состояние окна. Окно ищется только в текущем процессе по классу `UnityWndClass`; `IsIconic` определяет сворачивание, `GetForegroundWindow` определяет передний план. После штатной обработки копия данных передаётся координатору. Аргументы, результат и принятие матча мод не меняет.
 
-[NotificationCoordinator.cs](../source/NotificationCoordinator.cs) исключает повторы и проверяет актуальность события. Звук запускается в рабочем потоке. Объекты IL2CPP туда не передаются. Сетевых запросов и внешних служб у мода нет.
+[NotificationCoordinator.cs](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/source/NotificationCoordinator.cs) исключает повторы и проверяет актуальность события. Звук запускается в рабочем потоке. Объекты IL2CPP туда не передаются. Сетевых запросов и внешних служб у мода нет.
 
 ## 3. Настройки
 
@@ -28,7 +28,7 @@
 
 ## 4. Звук
 
-[WindowsNotifications.cs](../source/WindowsNotifications.cs) загружает встроенный PCM WAV длительностью 0,72 секунды. Исходный файл создан [генератором](../tools/generate_sound.py) специально для мода. Для обычной сборки Python не нужен: WAV уже находится в исходниках.
+[WindowsNotifications.cs](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/source/WindowsNotifications.cs) загружает встроенный PCM WAV длительностью 0,72 секунды. Исходный файл создан [генератором](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/development/tools/generate_sound.py) специально для мода. Для обычной сборки Python не нужен: WAV уже находится в исходниках.
 
 Используется `PlaySoundW` с флагами `SND_MEMORY`, `SND_SYSTEM`, `SND_NODEFAULT`, `SND_NOSTOP`. Вызов синхронный внутри рабочего потока, память WAV закреплена до его завершения. Игровой поток не ждёт окончания звука. Ошибки записываются в журнал; повторов и подмены сигнала стандартным звуком нет.
 
@@ -46,4 +46,6 @@
 
 Сообщения идут через журнал BepInEx, обычно `BepInEx/LogOutput.log`. Настройками записи и сохранением файла управляет загрузчик. Мод сообщает свою версию, совместимость, режим поиска, состояние окна, настройку звука и результат воспроизведения. Идентификаторы матчей, имена игроков и заголовки посторонних окон в сообщения Match Finder не включаются.
 
-Автономные проверки покрывают условия запуска звука, три названия режимов, повторы, конкурирующие события, отмену, срок действия, ошибки, остановку, проверку файлов и формат WAV. Они не запускают игру, не управляют окнами и не воспроизводят звук. Статус реальных проверок указан в [списке проверки игроком](testing.md).
+Автономные проверки покрывают условия запуска звука, три названия режимов, повторы, конкурирующие события, отмену, срок действия, ошибки, остановку, проверку файлов и формат WAV. Они не запускают игру, не управляют окнами и не воспроизводят звук. Статус реальных проверок указан в [списке проверки игроком](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/development/testing.md).
+
+[Установка и удаление](ops-admin.md) · [Главная](../README.md)

@@ -22,7 +22,7 @@ for index in range(round(rate * duration)):
             )
     samples.append(round(max(-1.0, min(1.0, value)) * 32767))
 
-target = Path(__file__).resolve().parents[1] / "source" / "Assets" / "match-found.wav"
+target = Path(__file__).resolve().parents[2] / "source" / "Assets" / "match-found.wav"
 target.parent.mkdir(parents=True, exist_ok=True)
 with wave.open(str(target), "wb") as output:
     output.setnchannels(1)

@@ -7,8 +7,8 @@
     <LangVersion>10.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\source\NotificationCoordinator.cs" Link="NotificationCoordinator.cs" />
-    <Compile Include="..\source\BuildCompatibility.cs" Link="BuildCompatibility.cs" />
-    <EmbeddedResource Include="..\source\Assets\match-found.wav" LogicalName="MatchFinder.MatchFound.wav" />
+    <Compile Include="..\..\source\NotificationCoordinator.cs" Link="NotificationCoordinator.cs" />
+    <Compile Include="..\..\source\BuildCompatibility.cs" Link="BuildCompatibility.cs" />
+    <EmbeddedResource Include="..\..\source\Assets\match-found.wav" LogicalName="MatchFinder.MatchFound.wav" />
   </ItemGroup>
 </Project>
