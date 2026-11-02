@@ -10,7 +10,7 @@ namespace OldenEra.MatchFinder;
 public sealed class Plugin : BasePlugin
 {
     internal const string Id = "local.oldenera.matchfinder";
-    internal const string Version = "0.1.3";
+    internal const string Version = "0.1.4";
     internal static Plugin? Instance;
     internal ConfigEntry<bool> PlaySound = null!;
     internal NotificationCoordinator? Coordinator;

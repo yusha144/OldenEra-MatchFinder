@@ -4,9 +4,9 @@ namespace OldenEra.MatchFinder;
 
 internal static class BuildCompatibility
 {
-    internal const string SteamBuild = "25672315";
-    internal const string AssemblyHash = "D9972B0E7F7DD1C17758808E2F1B80E0A728946416D9A41DEAA99BAD744DE53A";
-    internal const string MetadataHash = "99117DC93F4B427967A2FCA49378E1B39B3202401B15234A98328FAA7D489817";
+    internal const string SteamBuild = "26321935";
+    internal const string AssemblyHash = "20AD026C2E10ABFCB17320E8174B611551857B5D97D59BEBC29142B28CA45CB3";
+    internal const string MetadataHash = "BB50ABC2B3CBFCFA61617674A723761A5542831C263A34C6A70486840863F846";
 
     internal static bool IsSupported(string gameRoot) =>
         Matches(Path.Combine(gameRoot, "GameAssembly.dll"), AssemblyHash) &&
