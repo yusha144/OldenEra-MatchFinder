@@ -4,9 +4,9 @@
 
 Мод подаёт один короткий сигнал, когда в Heroes of Might and Magic: Olden Era найден сетевой матч, а игра свёрнута или находится в фоне. При активном окне игры дополнительного сигнала нет.
 
-**Версия 0.1.4.** Windows x64, Steam build 26321935, Unity 6000.0.66, BepInEx Unity.IL2CPP 6.0.0-be.788.
+**Версия 0.1.5.** Windows x64, Steam build 26321935, Unity 6000.0.66, BepInEx Unity.IL2CPP 6.0.0-be.788.
 
-[Скачать установщик 0.1.4](https://github.com/yusha144/OldenEra-MatchFinder/releases/download/v0.1.4/OldenEra-MatchFinder-0.1.4.zip) · [Все выпуски](https://github.com/yusha144/OldenEra-MatchFinder/releases)
+[Скачать установщик 0.1.5](https://github.com/yusha144/OldenEra-MatchFinder/releases/download/v0.1.5/OldenEra-MatchFinder-0.1.5.zip) · [Все выпуски](https://github.com/yusha144/OldenEra-MatchFinder/releases)
 
 Полностью распакуйте установочный архив и запустите `Install.bat` из корня, рядом с папкой `_files`. Кнопка `Code / Download ZIP` и ссылки `Source code` скачивают исходники для разработки.
 

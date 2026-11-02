@@ -6,7 +6,7 @@
     <LangVersion>10.0</LangVersion>
     <PlatformTarget>x64</PlatformTarget>
     <AssemblyName>OldenEra.MatchFinder</AssemblyName>
-    <Version>0.1.4</Version>
+    <Version>0.1.5</Version>
     <Description>Звуковое уведомление о найденном матче в Heroes of Might and Magic: Olden Era.</Description>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
