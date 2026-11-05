@@ -2,9 +2,9 @@
 
 ## 1. Назначение и совместимость
 
-Версия 0.1.5 уведомляет звуком о найденном матче, если игра была свёрнута или находилась в фоне в момент события. Окно не активируется. Режимы Classic, Solo и Arena используют общий обработчик поиска в проверенной сборке игры.
+Версия 0.1.6 уведомляет звуком о найденном матче, если игра была свёрнута или находилась в фоне в момент события. Окно не активируется. Режимы Classic, Solo и Arena используют общий обработчик поиска в проверенной сборке игры.
 
-Поддерживается Windows x64, Steam-сборка 26321935, Unity 6000.0.66f1, BepInEx Unity.IL2CPP 6.0.0-be.788. Плагин предназначен для .NET 6. Перед подключением к игровым методам проверяются SHA256 `GameAssembly.dll` и `HeroesOldenEra_Data/il2cpp_data/Metadata/global-metadata.dat`. Ожидаемые суммы заданы в [BuildCompatibility.cs](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/source/BuildCompatibility.cs) и [параметрах сборки](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/development/release-settings.json).
+Поддерживается Windows x64, Steam-сборка 26428102, Unity 6000.0.66f1, BepInEx Unity.IL2CPP 6.0.0-be.788. Плагин предназначен для .NET 6. Перед подключением к игровым методам проверяются SHA256 `GameAssembly.dll` и `HeroesOldenEra_Data/il2cpp_data/Metadata/global-metadata.dat`. Ожидаемые суммы заданы в [BuildCompatibility.cs](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/source/BuildCompatibility.cs) и [параметрах сборки](https://github.com/yusha144/OldenEra-MatchFinder/blob/main/development/release-settings.json).
 
 При несовпадении файлов уведомления отключаются. После обновления игры нужно снова проверить совместимость, а не просто заменить ожидаемые суммы.
 
@@ -24,7 +24,7 @@
 | --- | --- | --- | --- |
 | `Notifications.PlaySound` | Boolean | `true` | Подавать сигнал для найденного матча, если игра в фоне или свёрнута |
 
-Старый `Notifications.RestoreWindow` в 0.1.5 не читается и ни на что не влияет. При обновлении его можно удалить вместе с пояснением, сохранив `PlaySound`.
+Старый `Notifications.RestoreWindow` в 0.1.6 не читается и ни на что не влияет. При обновлении его можно удалить вместе с пояснением, сохранив `PlaySound`.
 
 ## 4. Звук
 
