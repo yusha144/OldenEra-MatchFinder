@@ -6,7 +6,7 @@
 
 **Версия 0.1.6.** Windows x64, Steam build 26428102, Unity 6000.0.66, BepInEx Unity.IL2CPP 6.0.0-be.788.
 
-[Скачать установщик 0.1.6](https://github.com/yusha144/OldenEra-MatchFinder/releases/download/v0.1.6/OldenEra-MatchFinder-0.1.6.zip) · [Все выпуски](https://github.com/yusha144/OldenEra-MatchFinder/releases)
+[Скачать установщик 0.1.7](https://github.com/yusha144/OldenEra-MatchFinder/releases/download/v0.1.7/OldenEra-MatchFinder-0.1.6.zip) · [Все выпуски](https://github.com/yusha144/OldenEra-MatchFinder/releases)
 
 Скачайте установочный ZIP по ссылке выше и распакуйте его целиком. Закройте игру и запустите `Install.bat` из распакованного архива.
 
