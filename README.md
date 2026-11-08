@@ -8,7 +8,7 @@
 
 [Скачать установщик 0.1.6](https://github.com/yusha144/OldenEra-MatchFinder/releases/download/v0.1.6/OldenEra-MatchFinder-0.1.6.zip) · [Все выпуски](https://github.com/yusha144/OldenEra-MatchFinder/releases)
 
-Полностью распакуйте установочный ZIP по ссылке выше. Закройте игру и запустите `Install.bat` из папки распаковки, где рядом лежат `Uninstall.bat` и `_files`.
+Скачайте установочный ZIP по ссылке выше и распакуйте его целиком. Закройте игру и запустите `Install.bat` из распакованного архива.
 
 [Установка, обновление и удаление](Docs/ops-admin.md) · [Настройки и устройство](Docs/general.md) · [Обратная связь](Docs/feedback.md)
 
